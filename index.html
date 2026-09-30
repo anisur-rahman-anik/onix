@@ -1,136 +1,2555 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Good Afternoon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      overflow: hidden;
-    }
+    <title>Happy Birthday Shipu 🎂💕</title>
 
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 50px 60px;
-      border-radius: 20px;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
-      text-align: center;
-      animation: fadeIn 1.5s ease;
-    }
+    <style>
 
-    .title {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      color: #fff;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
-    }
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
 
-    .subtitle {
-      color: #f1f1f1;
-      font-size: 20px;
-      margin-bottom: 25px;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .name {
-      font-size: 32px;
-      font-weight: 600;
-      color: #ffd700;
-      margin-bottom: 30px;
-    }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      border-radius: 50px;
-      background: linear-gradient(45deg, #ff6a00, #ee0979);
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            overflow: hidden;
+            background: #fff0f5;
+        }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
+        button,
+        input {
+            font-family: inherit;
+        }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
 
-    /* floating circles */
-    .circle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      animation: float 10s infinite ease-in-out;
-    }
+        /* =====================================================
+           COMMON PAGE
+        ===================================================== */
 
-    .circle:nth-child(1) {
-      width: 200px;
-      height: 200px;
-      top: 10%;
-      left: 10%;
-    }
+        .page {
+            position: absolute;
+            inset: 0;
 
-    .circle:nth-child(2) {
-      width: 150px;
-      height: 150px;
-      bottom: 15%;
-      right: 10%;
-      animation-delay: 2s;
-    }
+            width: 100%;
+            min-height: 100vh;
 
-    .circle:nth-child(3) {
-      width: 100px;
-      height: 100px;
-      bottom: 40%;
-      left: 20%;
-      animation-delay: 4s;
-    }
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0px); }
-    }
-  </style>
+            opacity: 0;
+            visibility: hidden;
+
+            transform: scale(1.03);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease,
+                visibility 0.7s;
+        }
+
+        .page.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+
+        /* =====================================================
+           COMMON BUTTON
+        ===================================================== */
+
+        .cute-btn {
+            padding: 15px 32px;
+
+            border: none;
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff6685,
+                    #ff8c72
+                );
+
+            color: white;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 12px 28px rgba(255, 90, 125, 0.30);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .cute-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+
+            box-shadow:
+                0 16px 35px rgba(255, 90, 125, 0.40);
+        }
+
+
+        /* =====================================================
+           PAGE 1
+           SWEET LOGIN
+        ===================================================== */
+
+        #page1 {
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    #ffe1ea,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    #ffcbd9,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff5f8,
+                    #ffe8ef
+                );
+        }
+
+
+        .login-card {
+            position: relative;
+
+            width: min(90%, 440px);
+
+            padding: 48px 35px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.76);
+
+            backdrop-filter: blur(16px);
+
+            border:
+                2px solid rgba(255, 255, 255, 0.85);
+
+            border-radius: 35px;
+
+            box-shadow:
+                0 25px 60px rgba(210, 70, 110, 0.16);
+
+            z-index: 5;
+        }
+
+
+        .bear {
+            font-size: 75px;
+
+            animation:
+                bounce 2s infinite;
+        }
+
+
+        .login-card h1 {
+            margin-top: 8px;
+
+            font-size: 35px;
+
+            color: #df5275;
+        }
+
+
+        .login-card p {
+            margin: 15px 0 25px;
+
+            color: #805563;
+
+            line-height: 1.7;
+        }
+
+
+        .name-input {
+            width: 100%;
+
+            padding: 15px 20px;
+
+            margin-bottom: 18px;
+
+            border:
+                2px solid #ffc1d1;
+
+            border-radius: 50px;
+
+            outline: none;
+
+            background: #fffafd;
+
+            color: #c84d6d;
+
+            text-align: center;
+
+            font-size: 17px;
+
+            transition: 0.25s;
+        }
+
+
+        .name-input:focus {
+            border-color: #ff7799;
+
+            box-shadow:
+                0 0 0 5px rgba(255, 119, 153, 0.10);
+        }
+
+
+        .tiny-text {
+            display: block;
+
+            margin-top: 17px;
+
+            color: #b77b8d;
+
+            font-size: 13px;
+        }
+
+
+        /* Floating hearts */
+
+        .heart {
+            position: absolute;
+
+            bottom: -40px;
+
+            color:
+                rgba(255, 80, 125, 0.55);
+
+            z-index: 1;
+
+            pointer-events: none;
+
+            animation:
+                floatHeart linear forwards;
+        }
+
+
+        @keyframes floatHeart {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(-115vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-10px);
+            }
+        }
+
+
+        /* =====================================================
+           PAGE 2
+           MEMORY
+        ===================================================== */
+
+        #page2 {
+            padding: 30px 15px;
+
+            overflow-y: auto;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #ffdbe6,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff7fa,
+                    #fde7ee
+                );
+        }
+
+
+        .memory-container {
+            width: min(92%, 900px);
+
+            text-align: center;
+        }
+
+
+        .memory-container h2 {
+            color: #dc5073;
+
+            font-size: 38px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .subtitle {
+            color: #a36b7b;
+
+            margin-bottom: 30px;
+        }
+
+
+        .memory-card {
+            display: flex;
+
+            align-items: center;
+
+            gap: 35px;
+
+            padding: 38px;
+
+            background:
+                rgba(255, 255, 255, 0.88);
+
+            border:
+                1px solid rgba(255,255,255,0.8);
+
+            border-radius: 35px;
+
+            box-shadow:
+                0 20px 50px rgba(180, 70, 110, 0.13);
+
+            text-align: left;
+        }
+
+
+        .photo-box {
+            position: relative;
+
+            flex-shrink: 0;
+
+            width: 230px;
+            height: 270px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffd4df,
+                    #fff2f6
+                );
+
+            border:
+                8px solid white;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.12);
+
+            transform:
+                rotate(-4deg);
+
+            font-size: 80px;
+        }
+
+
+        .photo-box::after {
+            content:
+                "Sisters Forever 💕";
+
+            position: absolute;
+
+            bottom: 13px;
+
+            color: #c55b77;
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+
+        .memory-text h3 {
+            margin-bottom: 15px;
+
+            color: #d84e71;
+
+            font-size: 26px;
+        }
+
+
+        .memory-text p {
+            margin-bottom: 12px;
+
+            color: #71525c;
+
+            line-height: 1.8;
+        }
+
+
+        .signature {
+            color: #e15b82 !important;
+
+            font-family: cursive;
+
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           PAGE 3
+           CAKE
+        ===================================================== */
+
+        #page3 {
+            flex-direction: column;
+
+            padding: 25px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #fff9dc,
+                    transparent 45%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff4f7,
+                    #ffe2ea
+                );
+        }
+
+
+        .cake-title {
+            margin-bottom: 30px;
+
+            color: #df5074;
+
+            font-size: 42px;
+
+            text-align: center;
+        }
+
+
+        .cake-area {
+            position: relative;
+
+            width: 320px;
+            height: 300px;
+        }
+
+
+        .plate {
+            position: absolute;
+
+            left: 0;
+            bottom: 15px;
+
+            width: 320px;
+            height: 35px;
+
+            background: #fafafa;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 10px 14px rgba(0,0,0,0.13);
+        }
+
+
+        .cake-bottom {
+            position: absolute;
+
+            left: 35px;
+            bottom: 40px;
+
+            width: 250px;
+            height: 125px;
+
+            background:
+                linear-gradient(
+                    #f9a2bc,
+                    #f486a7
+                );
+
+            border-radius:
+                14px 14px 28px 28px;
+        }
+
+
+        .cake-top {
+            position: absolute;
+
+            left: 60px;
+            bottom: 140px;
+
+            width: 200px;
+            height: 100px;
+
+            background:
+                linear-gradient(
+                    #ffc0d0,
+                    #ff98b4
+                );
+
+            border-radius: 12px;
+        }
+
+
+        .icing {
+            position: absolute;
+
+            left: 60px;
+            bottom: 220px;
+
+            width: 200px;
+            height: 35px;
+
+            background: #fffafd;
+
+            border-radius: 50%;
+        }
+
+
+        .icing::before,
+        .icing::after {
+            content: "";
+
+            position: absolute;
+
+            top: 15px;
+
+            width: 37px;
+            height: 43px;
+
+            background: #fffafd;
+
+            border-radius:
+                0 0 22px 22px;
+        }
+
+
+        .icing::before {
+            left: 43px;
+        }
+
+
+        .icing::after {
+            right: 43px;
+        }
+
+
+        /* Candles */
+
+        .candles {
+            position: absolute;
+
+            left: 95px;
+            bottom: 250px;
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .candle {
+            position: relative;
+
+            width: 12px;
+            height: 55px;
+
+            border-radius: 4px;
+
+            background:
+                repeating-linear-gradient(
+                    45deg,
+                    #ff5f8f 0px,
+                    #ff5f8f 6px,
+                    white 6px,
+                    white 12px
+                );
+        }
+
+
+        .flame {
+            position: absolute;
+
+            left: -3px;
+            top: -31px;
+
+            width: 18px;
+            height: 29px;
+
+            background: #ffad19;
+
+            border-radius:
+                50% 50% 48% 48%;
+
+            box-shadow:
+                0 0 15px #ffb300,
+                0 0 30px rgba(255, 166, 0, 0.45);
+
+            transform-origin: bottom;
+
+            animation:
+                flicker 0.4s infinite alternate;
+        }
+
+
+        @keyframes flicker {
+
+            from {
+                transform:
+                    scale(1)
+                    rotate(-5deg);
+
+                background: #ffd54f;
+            }
+
+            to {
+                transform:
+                    scale(0.82)
+                    rotate(6deg);
+
+                background: #ff9800;
+            }
+        }
+
+
+        .flame.off {
+            display: none;
+        }
+
+
+        .cake-message {
+            margin:
+                8px 0 20px;
+
+            color: #c75878;
+
+            font-size: 18px;
+
+            text-align: center;
+        }
+
+
+        /* =====================================================
+           RUNAWAY MONEY BUTTON 💸
+        ===================================================== */
+
+        .money-btn {
+            position: relative;
+
+            margin-top: 18px;
+
+            padding: 15px 31px 15px 25px;
+
+            border:
+                2px solid rgba(255,255,255,0.8);
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #14bd6a,
+                    #00d47e,
+                    #0a9f59
+                );
+
+            color: white;
+
+            font-size: 17px;
+            font-weight: 800;
+
+            letter-spacing: 0.2px;
+
+            white-space: nowrap;
+
+            cursor: pointer;
+
+            z-index: 9999;
+
+            box-shadow:
+                0 7px 0 #087747,
+                0 15px 28px rgba(0, 170, 95, 0.30);
+
+            transition:
+                left 0.10s ease,
+                top 0.10s ease,
+                transform 0.15s ease,
+                box-shadow 0.15s ease;
+        }
+
+
+        .money-btn::before {
+            content: "";
+
+            position: absolute;
+
+            left: 12%;
+            top: 5px;
+
+            width: 76%;
+            height: 32%;
+
+            border-radius: 50px;
+
+            background:
+                rgba(255,255,255,0.20);
+
+            pointer-events: none;
+        }
+
+
+        .money-btn:hover {
+            transform:
+                scale(1.04);
+        }
+
+
+        .money-btn.running {
+            position: fixed !important;
+
+            margin: 0 !important;
+        }
+
+
+        .money-btn.shake {
+            animation:
+                moneyShake 0.20s ease;
+        }
+
+
+        @keyframes moneyShake {
+
+            0% {
+                transform:
+                    rotate(0deg);
+            }
+
+            25% {
+                transform:
+                    rotate(-5deg);
+            }
+
+            50% {
+                transform:
+                    rotate(5deg);
+            }
+
+            75% {
+                transform:
+                    rotate(-3deg);
+            }
+
+            100% {
+                transform:
+                    rotate(0deg);
+            }
+        }
+
+
+        /* =====================================================
+           PAGE 4
+           FIREWORKS
+        ===================================================== */
+
+        #page4 {
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #32135b 0%,
+                    #150728 50%,
+                    #05010a 100%
+                );
+        }
+
+
+        #fireworks {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .final-content {
+            position: relative;
+
+            z-index: 10;
+
+            width: min(92%, 900px);
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+
+        .final-small {
+            color: #ffd4e6;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            letter-spacing: 6px;
+
+            text-transform: uppercase;
+        }
+
+
+        .final-content h1 {
+            margin: 15px 0;
+
+            color: white;
+
+            font-size:
+                clamp(48px, 8vw, 95px);
+
+            line-height: 1.05;
+
+            text-shadow:
+                0 0 10px #ff4f9a,
+                0 0 30px #ff4f9a,
+                0 0 60px #9b5cff;
+
+            animation:
+                finalGlow 2s infinite alternate;
+        }
+
+
+        .shipu {
+            color: #ffc1da;
+
+            font-family: cursive;
+        }
+
+
+        .final-message {
+            max-width: 680px;
+
+            margin: auto;
+
+            color: #f9ebff;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+
+        .final-icons {
+            margin-top: 25px;
+
+            font-size: 36px;
+
+            animation:
+                bounce 2s infinite;
+        }
+
+
+        @keyframes finalGlow {
+
+            from {
+                transform:
+                    scale(1);
+            }
+
+            to {
+                transform:
+                    scale(1.035);
+            }
+        }
+
+
+        /* =====================================================
+           CONFETTI
+        ===================================================== */
+
+        .confetti {
+            position: fixed;
+
+            top: -20px;
+
+            width: 10px;
+            height: 15px;
+
+            z-index: 10000;
+
+            pointer-events: none;
+
+            animation:
+                confettiFall linear forwards;
+        }
+
+
+        @keyframes confettiFall {
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+
+                opacity: 0.6;
+            }
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .login-card {
+                padding:
+                    38px 24px;
+            }
+
+
+            .memory-card {
+                flex-direction: column;
+
+                padding: 27px;
+
+                text-align: center;
+            }
+
+
+            .photo-box {
+                width: 180px;
+                height: 210px;
+
+                font-size: 60px;
+            }
+
+
+            .memory-container h2 {
+                font-size: 29px;
+            }
+
+
+            .memory-text p {
+                font-size: 14px;
+            }
+
+
+            .cake-title {
+                font-size: 31px;
+
+                margin-bottom: 15px;
+            }
+
+
+            .cake-area {
+                transform:
+                    scale(0.83);
+
+                margin:
+                    -20px 0;
+            }
+
+
+            .cake-message {
+                font-size: 15px;
+            }
+
+
+            .final-message {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
 
-  <div class="card">
-    <div class="title">Good Afternoon 🎉</div>
-    <div class="subtitle">Wishing you a cozy afternoon with joy</div>
-    <div class="name">Anik</div>
-    <a href="#" class="btn">Best Wishes for you</a>
-  </div>
+    <!-- =====================================================
+         PAGE 1
+         SWEET LOGIN
+    ====================================================== -->
+
+    <section
+        class="page active"
+        id="page1"
+    >
+
+        <div id="heartContainer"></div>
+
+
+        <div class="login-card">
+
+            <div class="bear">
+                🐻🎀
+            </div>
+
+
+            <h1>
+                Hello, Birthday Girl!
+            </h1>
+
+
+            <p>
+                Someone very special was born today,
+                so I made this little surprise just for you.
+                💕✨
+            </p>
+
+
+            <input
+                type="text"
+                class="name-input"
+                id="nameInput"
+                placeholder="Type your name..."
+                autocomplete="off"
+            >
+
+
+            <button
+                class="cute-btn"
+                onclick="enterBirthday()"
+            >
+                Open Your Surprise 💌
+            </button>
+
+
+            <span class="tiny-text">
+                No password needed.
+                Birthday girls get VIP access. ✨
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAGE 2
+         SWEET MEMORY
+    ====================================================== -->
+
+    <section
+        class="page"
+        id="page2"
+    >
+
+        <div class="memory-container">
+
+            <h2>
+                A Little Memory For You 💌
+            </h2>
+
+
+            <p class="subtitle">
+                Some memories don't need photographs
+                to stay with us.
+            </p>
+
+
+            <div class="memory-card">
+
+
+                <div class="photo-box">
+                    👭
+                </div>
+
+
+                <div class="memory-text">
+
+                    <h3>
+                        Dear Shipu,
+                    </h3>
+
+
+                    <p>
+                        When I think about growing up with you,
+                        I don't remember only the big moments.
+                        I remember all the tiny ones.
+                    </p>
+
+
+                    <p>
+                        The random conversations, the silly
+                        arguments that lasted five minutes,
+                        sharing food and then complaining about
+                        who ate more, and laughing at things
+                        nobody else would understand.
+                    </p>
+
+
+                    <p>
+                        Life keeps changing, but having a sister
+                        means a little piece of childhood keeps
+                        travelling with you wherever you go.
+                    </p>
+
+
+                    <p>
+                        Thank you for being part of so many
+                        ordinary moments that somehow became
+                        some of my favorite memories. 💗
+                    </p>
+
+
+                    <p class="signature">
+                        Always your annoying sibling ♡
+                    </p>
+
+
+                    <br>
+
+
+                    <button
+                        class="cute-btn"
+                        onclick="showPage(3)"
+                    >
+                        I Have Something For You 🎂
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAGE 3
+         CAKE + RUNAWAY 1000 TK 😂
+    ====================================================== -->
+
+    <section
+        class="page"
+        id="page3"
+    >
+
+
+        <h2 class="cake-title">
+            Make a Wish, Shipu! ✨
+        </h2>
+
+
+        <div class="cake-area">
+
+
+            <div class="plate"></div>
+
+
+            <div class="cake-bottom"></div>
+
+
+            <div class="cake-top"></div>
+
+
+            <div class="icing"></div>
+
+
+            <div class="candles">
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p
+            class="cake-message"
+            id="cakeMessage"
+        >
+            Close your eyes, make a wish,
+            and blow out the candles. 🎀
+        </p>
+
+
+        <!-- REAL BUTTON -->
+
+        <button
+            class="cute-btn"
+            id="blowButton"
+            onclick="blowCandles()"
+        >
+            💨 Blow the Candles
+        </button>
+
+
+        <!-- THE TRAP 😂 -->
+
+        <button
+            class="money-btn"
+            id="moneyButton"
+            type="button"
+        >
+            💸 Withdraw 1000 TK
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAGE 4
+         FIREWORKS
+    ====================================================== -->
+
+    <section
+        class="page"
+        id="page4"
+    >
+
+
+        <canvas id="fireworks"></canvas>
+
+
+        <div class="final-content">
+
+
+            <div class="final-small">
+                Today is all about you
+            </div>
+
+
+            <h1>
+
+                Happy Birthday
+
+                <br>
+
+                <span class="shipu">
+                    Shipu! 🎂
+                </span>
+
+            </h1>
+
+
+            <p class="final-message">
+
+                May this new chapter bring you
+                countless reasons to smile,
+                beautiful surprises, peaceful days,
+                ridiculous amounts of happiness,
+                and dreams that slowly turn into
+                memories worth keeping forever.
+
+                <br><br>
+
+                Stay happy.
+                Stay wonderfully you. 💕
+
+            </p>
+
+
+            <div class="final-icons">
+                🎀 🎂 💖 ✨ 🎉
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <script>
+
+        /* =====================================================
+           PAGE NAVIGATION
+        ===================================================== */
+
+        function showPage(pageNumber) {
+
+            document
+                .querySelectorAll(".page")
+                .forEach(page => {
+
+                    page.classList.remove("active");
+
+                });
+
+
+            const target =
+                document.getElementById(
+                    "page" + pageNumber
+                );
+
+
+            target.classList.add("active");
+
+
+            if (pageNumber === 4) {
+
+                startFireworks();
+
+            }
+        }
+
+
+
+        /* =====================================================
+           LOGIN
+        ===================================================== */
+
+        function enterBirthday() {
+
+            const input =
+                document.getElementById(
+                    "nameInput"
+                );
+
+
+            const name =
+                input.value.trim();
+
+
+            if (name === "") {
+
+                input.placeholder =
+                    "At least tell me who you are 😜";
+
+                input.focus();
+
+                return;
+            }
+
+
+            showPage(2);
+        }
+
+
+        /*
+            Press ENTER on login
+        */
+
+        document
+            .getElementById("nameInput")
+            .addEventListener(
+                "keydown",
+                function(event) {
+
+                    if (event.key === "Enter") {
+
+                        enterBirthday();
+
+                    }
+
+                }
+            );
+
+
+
+        /* =====================================================
+           FLOATING HEARTS
+        ===================================================== */
+
+        function createHeart() {
+
+            const page1 =
+                document.getElementById("page1");
+
+
+            /*
+                Don't keep creating hearts
+                when Page 1 isn't visible.
+            */
+
+            if (
+                !page1.classList.contains("active")
+            ) {
+                return;
+            }
+
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.classList.add("heart");
+
+
+            const hearts = [
+
+                "♥",
+                "♡",
+                "💕",
+                "💗",
+                "🎀",
+                "✨"
+
+            ];
+
+
+            heart.innerHTML =
+                hearts[
+                    Math.floor(
+                        Math.random() *
+                        hearts.length
+                    )
+                ];
+
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.fontSize =
+                (
+                    15 +
+                    Math.random() * 25
+                ) + "px";
+
+
+            heart.style.animationDuration =
+                (
+                    5 +
+                    Math.random() * 5
+                ) + "s";
+
+
+            document
+                .getElementById(
+                    "heartContainer"
+                )
+                .appendChild(heart);
+
+
+            setTimeout(
+                function() {
+
+                    heart.remove();
+
+                },
+                10000
+            );
+        }
+
+
+        setInterval(
+            createHeart,
+            450
+        );
+
+
+
+        /* =====================================================
+           RUNAWAY 1000 TK BUTTON 💸😂
+        ===================================================== */
+
+        const moneyButton =
+            document.getElementById(
+                "moneyButton"
+            );
+
+
+        const blowButton =
+            document.getElementById(
+                "blowButton"
+            );
+
+
+        let escapeCount = 0;
+
+
+        let lastEscapeTime = 0;
+
+
+        const funnyMessages = [
+
+            "😂 Nice try!",
+
+            "🏃 Too slow!",
+
+            "😜 Catch me!",
+
+            "💰 Almost yours...",
+
+            "🤭 Nope!",
+
+            "💸 Try again!",
+
+            "😂 Not that easy!",
+
+            "👀 Still trying?",
+
+            "🤣 Give up!",
+
+            "🎂 Blow the candles!",
+
+            "💸 1000 TK escaped!"
+
+        ];
+
+
+
+        /* =====================================================
+           CHECK WHETHER RANDOM POSITION
+           IS TOO CLOSE TO REAL BUTTON
+        ===================================================== */
+
+        function isNearBlowButton(
+            x,
+            y,
+            width,
+            height
+        ) {
+
+            const blowRect =
+                blowButton
+                    .getBoundingClientRect();
+
+
+            const safety = 90;
+
+
+            return !(
+
+                x + width <
+                    blowRect.left -
+                    safety
+
+                ||
+
+                x >
+                    blowRect.right +
+                    safety
+
+                ||
+
+                y + height <
+                    blowRect.top -
+                    safety
+
+                ||
+
+                y >
+                    blowRect.bottom +
+                    safety
+
+            );
+        }
+
+
+
+        /* =====================================================
+           GET RANDOM SAFE POSITION
+        ===================================================== */
+
+        function getSafePosition() {
+
+            const width =
+                moneyButton.offsetWidth;
+
+
+            const height =
+                moneyButton.offsetHeight;
+
+
+            const padding = 25;
+
+
+            const maxX =
+                Math.max(
+                    padding,
+                    window.innerWidth -
+                    width -
+                    padding
+                );
+
+
+            const maxY =
+                Math.max(
+                    padding,
+                    window.innerHeight -
+                    height -
+                    padding
+                );
+
+
+            let x = padding;
+
+            let y = padding;
+
+            let attempts = 0;
+
+
+            do {
+
+                x =
+                    padding +
+                    Math.random() *
+                    Math.max(
+                        1,
+                        maxX - padding
+                    );
+
+
+                y =
+                    padding +
+                    Math.random() *
+                    Math.max(
+                        1,
+                        maxY - padding
+                    );
+
+
+                attempts++;
+
+
+            } while (
+
+                isNearBlowButton(
+                    x,
+                    y,
+                    width,
+                    height
+                )
+
+                &&
+
+                attempts < 100
+
+            );
+
+
+            return {
+                x,
+                y
+            };
+        }
+
+
+
+        /* =====================================================
+           MOVE MONEY BUTTON
+        ===================================================== */
+
+        function moveMoneyButton() {
+
+            /*
+                Small cooldown prevents hundreds
+                of moves in one millisecond.
+            */
+
+            const now = Date.now();
+
+
+            if (
+                now - lastEscapeTime < 120
+            ) {
+                return;
+            }
+
+
+            lastEscapeTime = now;
+
+
+            const page3 =
+                document.getElementById(
+                    "page3"
+                );
+
+
+            if (
+                !page3.classList.contains(
+                    "active"
+                )
+            ) {
+                return;
+            }
+
+
+            escapeCount++;
+
+
+            /*
+                On first escape:
+                remember its original screen
+                position before making it fixed.
+            */
+
+            if (
+                !moneyButton
+                    .classList
+                    .contains("running")
+            ) {
+
+                const rect =
+                    moneyButton
+                        .getBoundingClientRect();
+
+
+                moneyButton
+                    .classList
+                    .add("running");
+
+
+                moneyButton.style.left =
+                    rect.left + "px";
+
+
+                moneyButton.style.top =
+                    rect.top + "px";
+            }
+
+
+            const position =
+                getSafePosition();
+
+
+            moneyButton.style.left =
+                position.x + "px";
+
+
+            moneyButton.style.top =
+                position.y + "px";
+
+
+            /*
+                Funny text
+            */
+
+            const index =
+                (escapeCount - 1) %
+                funnyMessages.length;
+
+
+            moneyButton.innerHTML =
+                funnyMessages[index];
+
+
+            /*
+                Shake animation
+            */
+
+            moneyButton
+                .classList
+                .remove("shake");
+
+
+            void moneyButton.offsetWidth;
+
+
+            moneyButton
+                .classList
+                .add("shake");
+        }
+
+
+
+        /* =====================================================
+           DESKTOP
+
+           Detect cursor BEFORE it reaches
+           the money button.
+        ===================================================== */
+
+        document.addEventListener(
+            "mousemove",
+            function(event) {
+
+                const page3 =
+                    document.getElementById(
+                        "page3"
+                    );
+
+
+                if (
+                    !page3
+                        .classList
+                        .contains("active")
+                ) {
+                    return;
+                }
+
+
+                if (
+                    moneyButton.style.display
+                    === "none"
+                ) {
+                    return;
+                }
+
+
+                const rect =
+                    moneyButton
+                        .getBoundingClientRect();
+
+
+                /*
+                    Closest point on rectangle
+                    to mouse cursor.
+                */
+
+                const closestX =
+                    Math.max(
+                        rect.left,
+                        Math.min(
+                            event.clientX,
+                            rect.right
+                        )
+                    );
+
+
+                const closestY =
+                    Math.max(
+                        rect.top,
+                        Math.min(
+                            event.clientY,
+                            rect.bottom
+                        )
+                    );
+
+
+                const dx =
+                    event.clientX -
+                    closestX;
+
+
+                const dy =
+                    event.clientY -
+                    closestY;
+
+
+                const distance =
+                    Math.sqrt(
+                        dx * dx +
+                        dy * dy
+                    );
+
+
+                /*
+                    Button runs when cursor gets
+                    within 85px.
+
+                    Increase to 120 if you want
+                    it more difficult.
+                */
+
+                const dangerDistance = 85;
+
+
+                if (
+                    distance <
+                    dangerDistance
+                ) {
+
+                    moveMoneyButton();
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           EXTRA DESKTOP PROTECTION
+        ===================================================== */
+
+        moneyButton.addEventListener(
+            "mouseenter",
+            function() {
+
+                moveMoneyButton();
+
+            }
+        );
+
+
+        moneyButton.addEventListener(
+            "pointerdown",
+            function(event) {
+
+                event.preventDefault();
+
+                event.stopPropagation();
+
+                moveMoneyButton();
+
+            }
+        );
+
+
+        moneyButton.addEventListener(
+            "mousedown",
+            function(event) {
+
+                event.preventDefault();
+
+                moveMoneyButton();
+
+            }
+        );
+
+
+
+        /* =====================================================
+           MOBILE SUPPORT
+        ===================================================== */
+
+        moneyButton.addEventListener(
+            "touchstart",
+            function(event) {
+
+                event.preventDefault();
+
+                event.stopPropagation();
+
+                moveMoneyButton();
+
+            },
+            {
+                passive: false
+            }
+        );
+
+
+
+        /* =====================================================
+           ABSOLUTELY NO 1000 TK 😂
+        ===================================================== */
+
+        moneyButton.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+                event.stopPropagation();
+
+                moveMoneyButton();
+
+                return false;
+
+            }
+        );
+
+
+
+        /* =====================================================
+           BLOW THE CANDLES
+        ===================================================== */
+
+        function blowCandles() {
+
+            const flames =
+                document.querySelectorAll(
+                    ".flame"
+                );
+
+
+            /*
+                Turn off flames
+            */
+
+            flames.forEach(
+                flame => {
+
+                    flame
+                        .classList
+                        .add("off");
+
+                }
+            );
+
+
+            /*
+                1000 TK has left the chat 😂
+            */
+
+            moneyButton.style.display =
+                "none";
+
+
+            /*
+                Change message
+            */
+
+            document
+                .getElementById(
+                    "cakeMessage"
+                )
+                .innerHTML =
+                "Wish made! ✨ I hope it comes true, Shipu. 💕";
+
+
+            /*
+                Convert candle button
+                into final-surprise button
+            */
+
+            blowButton.innerHTML =
+                "Open Your Final Surprise 🎉";
+
+
+            blowButton.onclick =
+                function() {
+
+                    createConfetti();
+
+                    showPage(4);
+
+                };
+
+
+            createConfetti();
+        }
+
+
+
+        /* =====================================================
+           CONFETTI
+        ===================================================== */
+
+        function createConfetti() {
+
+            const colors = [
+
+                "#ff5f8f",
+                "#ffd166",
+                "#9b5de5",
+                "#00bbf9",
+                "#f15bb5",
+                "#ffffff",
+                "#00d47e"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 130;
+                i++
+            ) {
+
+                const confetti =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                confetti.classList.add(
+                    "confetti"
+                );
+
+
+                confetti.style.left =
+                    Math.random() *
+                    100 +
+                    "vw";
+
+
+                confetti.style.backgroundColor =
+                    colors[
+                        Math.floor(
+                            Math.random() *
+                            colors.length
+                        )
+                    ];
+
+
+                confetti.style.animationDuration =
+                    (
+                        2 +
+                        Math.random() *
+                        3
+                    ) +
+                    "s";
+
+
+                confetti.style.animationDelay =
+                    (
+                        Math.random() *
+                        0.4
+                    ) +
+                    "s";
+
+
+                document.body
+                    .appendChild(
+                        confetti
+                    );
+
+
+                setTimeout(
+                    function() {
+
+                        confetti.remove();
+
+                    },
+                    5500
+                );
+            }
+        }
+
+
+
+        /* =====================================================
+           FIREWORKS
+        ===================================================== */
+
+        let fireworksStarted =
+            false;
+
+
+        function startFireworks() {
+
+            if (
+                fireworksStarted
+            ) {
+                return;
+            }
+
+
+            fireworksStarted = true;
+
+
+            const canvas =
+                document.getElementById(
+                    "fireworks"
+                );
+
+
+            const ctx =
+                canvas.getContext("2d");
+
+
+            /*
+                Resize canvas
+            */
+
+            function resizeCanvas() {
+
+                canvas.width =
+                    window.innerWidth;
+
+
+                canvas.height =
+                    window.innerHeight;
+            }
+
+
+            resizeCanvas();
+
+
+            window.addEventListener(
+                "resize",
+                resizeCanvas
+            );
+
+
+            const particles = [];
+
+
+            const fireworkColors = [
+
+                "#ff4f9a",
+                "#ffd166",
+                "#9b5cff",
+                "#00e5ff",
+                "#ffffff",
+                "#ff8fab",
+                "#7cffcb"
+
+            ];
+
+
+
+            function randomColor() {
+
+                return fireworkColors[
+                    Math.floor(
+                        Math.random() *
+                        fireworkColors.length
+                    )
+                ];
+            }
+
+
+
+            /* =================================================
+               EXPLOSION
+            ================================================= */
+
+            function explode(
+                x,
+                y
+            ) {
+
+                const color =
+                    randomColor();
+
+
+                for (
+                    let i = 0;
+                    i < 85;
+                    i++
+                ) {
+
+                    const angle =
+                        Math.random() *
+                        Math.PI *
+                        2;
+
+
+                    const speed =
+                        Math.random() *
+                        5 +
+                        1;
+
+
+                    particles.push({
+
+                        x: x,
+
+                        y: y,
+
+                        vx:
+                            Math.cos(angle) *
+                            speed,
+
+                        vy:
+                            Math.sin(angle) *
+                            speed,
+
+                        alpha: 1,
+
+                        color: color,
+
+                        size:
+                            Math.random() *
+                            2.5 +
+                            1
+
+                    });
+                }
+            }
+
+
+
+            /* =================================================
+               ANIMATION
+            ================================================= */
+
+            function animate() {
+
+                ctx.fillStyle =
+                    "rgba(5,1,10,0.20)";
+
+
+                ctx.fillRect(
+                    0,
+                    0,
+                    canvas.width,
+                    canvas.height
+                );
+
+
+                for (
+                    let i =
+                        particles.length - 1;
+
+                    i >= 0;
+
+                    i--
+                ) {
+
+                    const p =
+                        particles[i];
+
+
+                    p.x += p.vx;
+
+                    p.y += p.vy;
+
+
+                    /*
+                        Gravity
+                    */
+
+                    p.vy += 0.025;
+
+
+                    /*
+                        Friction
+                    */
+
+                    p.vx *= 0.992;
+
+                    p.vy *= 0.992;
+
+
+                    /*
+                        Fade
+                    */
+
+                    p.alpha -= 0.012;
+
+
+                    ctx.globalAlpha =
+                        Math.max(
+                            0,
+                            p.alpha
+                        );
+
+
+                    ctx.fillStyle =
+                        p.color;
+
+
+                    ctx.beginPath();
+
+
+                    ctx.arc(
+                        p.x,
+                        p.y,
+                        p.size,
+                        0,
+                        Math.PI * 2
+                    );
+
+
+                    ctx.fill();
+
+
+                    if (
+                        p.alpha <= 0
+                    ) {
+
+                        particles.splice(
+                            i,
+                            1
+                        );
+                    }
+                }
+
+
+                ctx.globalAlpha = 1;
+
+
+                requestAnimationFrame(
+                    animate
+                );
+            }
+
+
+            animate();
+
+
+
+            /* =================================================
+               INITIAL FIREWORK SHOW
+            ================================================= */
+
+            setTimeout(
+                function() {
+
+                    explode(
+                        canvas.width *
+                        0.20,
+
+                        canvas.height *
+                        0.30
+                    );
+
+                },
+                200
+            );
+
+
+            setTimeout(
+                function() {
+
+                    explode(
+                        canvas.width *
+                        0.80,
+
+                        canvas.height *
+                        0.25
+                    );
+
+                },
+                500
+            );
+
+
+            setTimeout(
+                function() {
+
+                    explode(
+                        canvas.width *
+                        0.50,
+
+                        canvas.height *
+                        0.18
+                    );
+
+                },
+                850
+            );
+
+
+            setTimeout(
+                function() {
+
+                    explode(
+                        canvas.width *
+                        0.30,
+
+                        canvas.height *
+                        0.55
+                    );
+
+                },
+                1200
+            );
+
+
+            setTimeout(
+                function() {
+
+                    explode(
+                        canvas.width *
+                        0.70,
+
+                        canvas.height *
+                        0.50
+                    );
+
+                },
+                1500
+            );
+
+
+
+            /* =================================================
+               CONTINUOUS FIREWORKS
+            ================================================= */
+
+            setInterval(
+                function() {
+
+                    /*
+                        Only create fireworks
+                        while Page 4 is active.
+                    */
+
+                    const page4 =
+                        document.getElementById(
+                            "page4"
+                        );
+
+
+                    if (
+                        !page4
+                            .classList
+                            .contains("active")
+                    ) {
+                        return;
+                    }
+
+
+                    const x =
+                        canvas.width *
+                        (
+                            0.10 +
+                            Math.random() *
+                            0.80
+                        );
+
+
+                    const y =
+                        canvas.height *
+                        (
+                            0.10 +
+                            Math.random() *
+                            0.45
+                        );
+
+
+                    explode(
+                        x,
+                        y
+                    );
+
+                },
+                750
+            );
+        }
+
+    </script>
 
 </body>
+
 </html>
->>>>>>> 098e9c362656652204f91944249d2c247831ac6d
